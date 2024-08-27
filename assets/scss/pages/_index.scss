@@ -28,12 +28,12 @@
         cursor: pointer;
     }
 }
-
-.swiper-pagination {
+ 
+.swp-pagination-style {
     width: 232px;
 }
 
-.swiper-pagination::after {
+.swp-pagination-style::after {
     content: "";
     width: 80px;
     height: 1px;
