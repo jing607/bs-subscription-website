@@ -1,0 +1,36 @@
+// body {
+//     line-height: 1.5;
+// }
+
+.font-en {
+    font-family: "Newsreader", serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+a {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+    letter-spacing: .1em;
+}
+
+p {
+    letter-spacing: .05em;
+}

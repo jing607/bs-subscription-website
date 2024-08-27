@@ -1,8 +1,18 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import './utils/variables';
-@import "../../node_modules/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+TC:wght@200..900&display=swap');
 
+@import 'bootstrap/scss/functions';
+@import './helpers/variables';
+@import 'bootstrap';
+
+@import './helpers/utils.scss';
+
+@import "bootstrap/scss/utilities/api";
+
+@import './base/base.scss';
+
+@import './components/button.scss';
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+@import './pages/article.scss';

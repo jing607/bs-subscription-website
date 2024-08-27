@@ -1,0 +1,54 @@
+$utilities: map-merge(
+  $utilities, (
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      ( responsive: true ),
+    ),
+    
+    "border-bottom": map-merge(
+      map-get($utilities, "border-bottom"),
+      (responsive: true),
+    ),
+   
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (responsive: true),
+    ),
+
+    "top": map-merge(
+      map-get($utilities, "top"),
+      ( responsive: true ),
+    ),
+
+    "start": map-merge(
+      map-get($utilities, "start"),
+      ( responsive: true ),
+    ),
+
+    "bottom": map-merge(
+      map-get($utilities, "bottom"),
+      ( responsive: true ),
+    ),
+
+    "translate-middle": map-merge(
+      map-get($utilities, "translate-middle"),
+      ( responsive: true ),
+    ),
+    
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      ( responsive: true ),
+    ),
+
+    "rounded-start": map-merge(
+      map-get($utilities, "rounded-start"),
+      ( responsive: true ),
+    ),
+
+    "rounded-end": map-merge(
+      map-get($utilities, "rounded-end"),
+      ( responsive: true ),
+    ),
+
+  )
+);

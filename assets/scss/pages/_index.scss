@@ -1,3 +1,102 @@
-.index-title {
-  font-size: 100px;
+.banner-content {
+    @include media-breakpoint-up(md) {
+        padding-left: 61px;
+    }
+}
+
+
+.theme-card {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    &-title {
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    &:hover::after {
+        opacity: .1;
+        cursor: pointer;
+    }
+}
+
+.swiper-pagination {
+    width: 232px;
+}
+
+.swiper-pagination::after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: #6c757d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plan-content {
+    &::before {
+        content: "";
+        background-image: url("../images/bg-1.png");
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 217px;
+        height: 76px;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+    &::after {
+        content: "";
+        background-image: url("../images/bg-2.png");
+        position: absolute;
+        right: 0;
+        bottom: -12px;
+        display: block;
+        width: 300px;
+        height: 196px;
+        @include media-breakpoint-down(md) {
+            width: 160px;
+            height: 104px; 
+            background-size: cover;
+            right: -30px;
+            bottom: -5px;
+        }
+    }
+    &-title {
+        color: $accent-200;
+        @include media-breakpoint-up(md) {
+            color: $primary-400;
+        }
+    }
+}
+
+.journey-nav {
+    &-link {
+        .active {
+            background: $accent-100;
+        }
+    }
+}
+  
+// .idea-content {
+//     padding-right: -12px;
+//     padding-left: -12px;
+// }
+
+.idea-card-wrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }

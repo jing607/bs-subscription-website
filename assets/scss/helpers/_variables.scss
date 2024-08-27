@@ -300,18 +300,61 @@ $cyans: (
 // scss-docs-start theme-color-variables
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+
+// custom color start
+$primary-100: #FFFDF5;
+$primary-200: #FFFBE5;
+$primary-300: #E8E3DA;
+$primary-400: #6E6B67;
+
+$accent-100: #E0EFDE;
+$accent-200: #569573;
+$accent-300: #406C55;
+
+$neutral-100: $gray-100;
+$neutral-200: $gray-300;
+$neutral-300: $gray-500;
+$neutral-400: $gray-600;
+$neutral-500: $gray-800;
+$neutral-600: $gray-900;
+
+$success:       #2CC585;
+$info:          #4A72FF;
+$warning:       #FFB054;
+$danger:        #D65F5F;
+// custom color end
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
+  "primary":    $accent-200, // $primary,
   "secondary":  $secondary,
+
+  // custom theme-colors-map start
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+
+  "accent-100": $accent-100,
+  "accent-200": $accent-200,
+  "accent-300": $accent-300,
+
+  "neutral-100": $neutral-100,
+  "neutral-200": $neutral-200,
+  "neutral-300": $neutral-300,
+  "neutral-400": $neutral-400,
+  "neutral-500": $neutral-500,
+  "neutral-600": $neutral-600,
+  // custom theme-colors-map end
+
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -378,7 +421,8 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+// $enable-rfs:                  true !default;
+$enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -409,12 +453,29 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
+  // 0: 0,
+  // 1: $spacer * .25,
+  // 2: $spacer * .5,
+  // 3: $spacer,
+  // 4: $spacer * 1.5,
+  // 5: $spacer * 3,
+
+  // custom spacers start
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25, // 4px
+  2: $spacer * .5, // 3px
+  3: $spacer * .75, // 12px
+  4: $spacer, // 16
+  5: $spacer * 1.25, // 20px
+  6: $spacer * 1.5, // 24px
+  7: $spacer * 1.75, // 28px
+  8: $spacer * 2, // 32px
+  9: $spacer * 2.25, // 36px
+  10: $spacer * 2.5, // 40px
+  11: $spacer * 3, // 48px
+  12: $spacer * 4, // 64
+  13: $spacer * 5  // 80px
+  // custom spacers end
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -425,7 +486,15 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  10: 10%, // custom
+  20: 20%, // custom
+  30: 30%, // custom
+  40: 40%, // custom
   50: 50%,
+  60: 60%, // custom
+  70: 70%, // custom
+  80: 80%, // custom
+  90: 90%, // custom
   100: 100%
 ) !default;
 // scss-docs-end position-map
@@ -435,8 +504,9 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+// $body-color:             $gray-900 !default; 
+$body-color:                $neutral-500; // $neutral-500 = bs $gray-800
+$body-bg:                   $primary-100; //$white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -450,8 +520,8 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-color:                              $accent-200; // $primary !default;
+$link-decoration:                         none; // underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -472,7 +542,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   0; // 1rem !default;
 
 
 // Grid breakpoints
@@ -599,11 +669,11 @@ $aspect-ratios: (
 
 // Typography
 //
-// Font, line-height, and color for body text, headings, and more.
+// Font, line-height, and color for body text, fs, and more.
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Serif TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -613,7 +683,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                $font-size-base * .875 !default; 
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
@@ -624,7 +694,8 @@ $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
+
+$font-weight-base:            $font-weight-semibold !default;// $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
@@ -640,20 +711,23 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: 0px, // custom
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: 12px, // custom
 ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default; // $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+
+$headings-font-weight:        bolder !default;// 500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
@@ -663,14 +737,21 @@ $display-font-sizes: (
   1: 5rem,
   2: 4.5rem,
   3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+  // 4: 3.5rem,
+  // 5: 3rem,
+  // 6: 2.5rem
+
+  // custom display start
+  4: 3.5rem, // 56px
+  5: 3.25rem, // 52px
+  6: 3rem,
+  7: 2.5rem
+  // custom display end
 ) !default;
 
 $display-font-family: null !default;
 $display-font-style:  null !default;
-$display-font-weight: 300 !default;
+$display-font-weight: 900; //300 !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
@@ -709,7 +790,7 @@ $hr-opacity:                  .25 !default;
 $vr-border-width:             var(--#{$prefix}border-width) !default;
 // scss-docs-end vr-variables
 
-$legend-margin-bottom:        .5rem !default;
+$legend-margin-bottom:        0; // .5rem !default;
 $legend-font-size:            1.5rem !default;
 $legend-font-weight:          null !default;
 
@@ -786,8 +867,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         .75rem; // .375rem !default;
+$input-btn-padding-x:         1.25rem; // .75rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -802,8 +883,8 @@ $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-y-lg:      1rem; // .5rem !default;
+$input-btn-padding-x-lg:      1.5rem; // 1rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      var(--#{$prefix}border-width) !default;
@@ -815,12 +896,12 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-color:                   var(--#{$prefix}body-color) !default;
+$btn-color:                   $white !default; // var(--#{$prefix}body-color) !default;
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
-$btn-line-height:             $input-btn-line-height !default;
+$btn-line-height:             1.2; // $input-btn-line-height !default;
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
@@ -831,9 +912,9 @@ $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
-$btn-border-width:            $input-btn-border-width !default;
+$btn-border-width:            0; // $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold; // $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -846,9 +927,9 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+$btn-border-radius:           $border-radius-pill; // var(--#{$prefix}border-radius) !default;
+$btn-border-radius-sm:        $border-radius-pill; // var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-lg:        $border-radius-pill; // var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -874,7 +955,7 @@ $form-text-color:                       var(--#{$prefix}secondary-color) !defaul
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
-$form-label-margin-bottom:              .5rem !default;
+$form-label-margin-bottom:              0; // .5rem !default;
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
@@ -1187,10 +1268,10 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-y:                  0; //$spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.25rem; // .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -1206,11 +1287,11 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
-$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
-$navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
-$navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
-$navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3) !default;
-$navbar-light-icon-color:           rgba($body-color, .75) !default;
+$navbar-light-color:                $neutral-500; // rgba(var(--#{$prefix}emphasis-color-rgb), .65) !default;
+$navbar-light-hover-color:          $neutral-600; // rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
+$navbar-light-active-color:         $neutral-600; // rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
+$navbar-light-disabled-color:       $neutral-300; // rgba(var(--#{$prefix}emphasis-color-rgb), .3) !default;
+$navbar-light-icon-color:           $black; //rgba($body-color, .75) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15) !default;
 $navbar-light-brand-color:          $navbar-light-active-color !default;
@@ -1638,7 +1719,7 @@ $breadcrumb-item-padding-x:         .5rem !default;
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
-$breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
+$breadcrumb-active-color:           $accent-200; // var(--#{$prefix}secondary-color) !default; *custom*
 $breadcrumb-divider:                quote("/") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
@@ -1708,7 +1789,7 @@ $btn-close-padding-y:        $btn-close-padding-x !default;
 $btn-close-color:            $black !default;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-focus-shadow:     $focus-ring-box-shadow !default;
-$btn-close-opacity:          .5 !default;
+$btn-close-opacity:          1; // .5 !default;
 $btn-close-hover-opacity:    .75 !default;
 $btn-close-focus-opacity:    1 !default;
 $btn-close-disabled-opacity: .25 !default;

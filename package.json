@@ -19,8 +19,10 @@
     "bootstrap-icons": "^1.11.3",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
+    "jquery": "^3.7.1",
     "sass": "^1.61.0",
     "sass-loader": "^13.2.2",
+    "swiper": "^11.1.10",
     "vite-plugin-live-reload": "^3.0.2"
   }
 }

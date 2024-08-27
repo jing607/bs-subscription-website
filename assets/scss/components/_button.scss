@@ -1,0 +1,7 @@
+.btn-primary {
+    color: white;
+    &:hover{
+        color: white;
+        background: $accent-300;
+    }
+}

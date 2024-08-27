@@ -1,4 +1,42 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<nav class="navbar navbar-expand-lg bg-primary-100">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-lg-nowrap flex-wrap py-9 w-100 border-bottom-md border-neutral-300">
+            <h1 class="fs-0">
+                <a class="navbar-brand " href="./index.html"><img src="/assets/images/logo.svg" alt="logo" class="align-top"></a>
+            </h1>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <button class="btn-close collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close" id="navbarSupportedContent">
+            </button> -->
+            <!-- <button class="nav-close collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close" id="navbarSupportedContent">
+                <i class="bi bi-x"></i>
+            </button> -->
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex  align-items-center position-relative my-lg-0 my-6" role="search">
+                    <input class="form-control pe-5 rounded-pill" type="search" placeholder="搜尋文章" aria-label="Search">
+                    <span class="position-absolute top-50 end-0 translate-middle-y pe-5">
+                        <i class="bi bi-search fs-4 text-primary"></i>
+                    </span>
+                </form>
+    
+                <ul class="navbar-nav ms-lg-auto mb-lg-0 mb-2 align-items-lg-center gap-lg-5 align-items-start">
+                    <li class="nav-item mb-lg-0 mb-6 px-3">
+                        <a class="nav-link" href="./article.html">所有文章</a>
+                    </li>
+                    <li class="nav-item mb-lg-0 mb-6 px-3">
+                        <a class="nav-link" href="#">訂閱方案</a>
+                    </li>
+                    <li class="nav-item mb-lg-0 mb-6 px-3">
+                        <a class="nav-link" aria-current="page" href="#">關於我們</a>
+                    </li>
+                    <li class="nav-item p-lg-0 p-3 w-100 w-lg-auto">
+                        <button class="btn btn-primary w-100" type="submit">登入 / 註冊</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</nav>
