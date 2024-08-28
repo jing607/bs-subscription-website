@@ -90,13 +90,17 @@
         }
     }
 }
-  
-// .idea-content {
-//     padding-right: -12px;
-//     padding-left: -12px;
-// }
 
-.idea-card-wrap {
-    flex-wrap: nowrap;
+.idea-card-list {
+    line-height: 1.2;
+    white-space: nowrap;
     overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+.idea-card {
+    flex: 0 0 auto; /* 防止 flex 項目縮小 */
+    width: 306px; /* 為每個卡片設置手機版固定寬度 */ 
 }
