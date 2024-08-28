@@ -29,11 +29,11 @@
     }
 }
  
-.swp-pagination-style {
+.swp-page-nav-style {
     width: 232px;
 }
 
-.swp-pagination-style::after {
+.swp-page-nav-style::after {
     content: "";
     width: 80px;
     height: 1px;
@@ -83,7 +83,7 @@
     }
 }
 
-.journey-nav {
+.trip-nav {
     &-link {
         .active {
             background: $accent-100;

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
     <title>Vivre</title>
   </head>
   <body>
@@ -20,11 +21,13 @@
             <img src="../assets/images/banner-sm.png" alt="banner" class="w-100">
           </picture>
           <div class="banner-content position-absolute top-lg-50 bottom-lg-30 bottom-0 start-lg-0 start-50 translate-middle-lg-y translate-middle-x pb-lg-0 pb-11 text-white w-100">
-            <div class="banner-title pb-lg-6 pb-5">
-              <p class="fs-lg-5 fs-6 pb-lg-3 pb-2">獻給新世代的生活風格誌</p>
-              <h2 class="fs-lg-1 fs-3">一起探索生活的無限可能</h2>
+            <div class="banner-header pb-lg-6 pb-5">
+              <!-- <p class="fs-lg-5 fs-6 pb-lg-3 pb-2">獻給新世代的生活風格誌</p>
+              <h2 class="fs-lg-1 fs-3">一起探索生活的無限可能</h2> -->
+              <p class="banner-subtitle fs-lg-5 fs-6 pb-lg-3 pb-2"></p>
+              <h2 class="banner-title fs-lg-1 fs-3"></h2>
             </div>
-            <a href="#" class="btn btn-primary btn-lg btn-responsive">馬上訂閱<i class="bi bi-arrow-right ms-3"></i></a>
+            <a href="#" class="banner-btn btn btn-primary btn-lg btn-responsive">馬上訂閱<i class="bi bi-arrow-right ms-3"></i></a>
           </div>
         </div>
       </section>
@@ -121,7 +124,7 @@
             <h2 class="fs-lg-2 fs-4 d-none d-lg-block">精選文章</h2>
             <div class="pagination d-flex flex-lg-column align-items-lg-start align-items-center w-100 ">
               <div class="article-swiper-pagination-custom w-auto pb-lg-8 font-en"></div>
-              <div class="article-swiper-pagination swp-pagination-style d-flex justify-content-between position-relative ms-lg-0 ms-auto text-neutral-400 ">
+              <div class="article-swiper-pagination swp-page-nav-style d-flex justify-content-between position-relative ms-lg-0 ms-auto text-neutral-400 ">
                 <div class="article-swiper-prev d-inline-block px-4 py-1 border border-1 border-neutral-400 rounded-pill swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-69fda5ab21c864ff" aria-disabled="true">
                   <i class="bi bi-arrow-left fs-4"></i>
                 </div>
@@ -247,8 +250,8 @@
       <section class="plan bg-primary-200">
         <div class="container position-relative py-lg-13 py-11 overflow-hidden">
           <div class="plan-content d-flex flex-column align-items-center">
-            <p class="plan-content-title pb-5 fs-lg-4">\ 母親節強檔活動 /</p>
-            <h2 class="pb-5 fs-lg-2 fs-4">家庭訂閱方案限時 7 折</h2>
+            <p class="plan-content-subtitle pb-5 fs-lg-4">\ 母親節強檔活動 /</p>
+            <h2 class="plan-content-title pb-5 fs-lg-2 fs-4">家庭訂閱方案限時 7 折</h2>
             <ol class="pb-6 fs-6 text-neutral-400">
               <li class="pb-4"><i class="bi bi-check-lg me-3"></i>每月最新文章無限閱讀</li>
               <li class="pb-4"><i class="bi bi-check-lg me-3"></i>專屬會員限定內容</li>
@@ -257,27 +260,27 @@
               <li class="pb-4"><i class="bi bi-check-lg me-3"></i>24 /7 優先客戶服務</li>
               <li><i class="bi bi-check-lg me-3"></i>為每個成員量身打造專屬行程</li>
             </ol>
-            <a href="#" class="btn btn-primary btn-lg btn-responsive">我想了解</a>
+            <a href="#" class="plan-btn btn btn-primary btn-lg btn-responsive">我想了解</a>
           </div>
         </div>
       </section>
 
-      <section class="journey container py-lg-13 py-11">
+      <section class="trip container py-lg-13 py-11">
         <h2 class="pb-lg-10 pb-6 fs-lg-2 fs-4">大家都在看</h2>
         <div class="row">
           <aside class="col-lg-3 d-lg-block d-none bg-white">
-            <div class="journey-nav flex-column p-lg-6 border-1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a  href="#" class="journey-nav-link active mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-alcohol-tab" data-bs-toggle="pill" data-bs-target="#v-pills-alcohol" type="button" role="tab" aria-controls="v-pills-alcohol" aria-selected="true">· 酒精路跑地圖</a>
-              <a href="#"  class="journey-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-noodle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-noodle" type="button" role="tab" aria-controls="v-pills-noodle" aria-selected="false">· 台灣拉麵地圖</a>
-              <a href="#"  class="journey-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-island-tab" data-bs-toggle="pill" data-bs-target="#v-pills-island" type="button" role="tab" aria-controls="v-pills-island" aria-selected="false">· 海島自由行</a>
-              <a href="#"  class="journey-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-travel-tab" data-bs-toggle="pill" data-bs-target="#v-pills-travel" type="button" role="tab" aria-controls="v-pills-travel" aria-selected="false">· 短天數出門推薦</a>
-              <a href="#"  class="journey-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-weekend-tab" data-bs-toggle="pill" data-bs-target="#v-pills-weekend" type="button" role="tab" aria-controls="v-pills-weekend" aria-selected="false">· 周末露營趣</a>
+            <div class="trip-nav flex-column p-lg-6 border-1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a  href="#" class="trip-nav-link active mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-alcohol-tab" data-bs-toggle="pill" data-bs-target="#v-pills-alcohol" type="button" role="tab" aria-controls="v-pills-alcohol" aria-selected="true">· 酒精路跑地圖</a>
+              <a href="#"  class="trip-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-noodle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-noodle" type="button" role="tab" aria-controls="v-pills-noodle" aria-selected="false">· 台灣拉麵地圖</a>
+              <a href="#"  class="trip-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-island-tab" data-bs-toggle="pill" data-bs-target="#v-pills-island" type="button" role="tab" aria-controls="v-pills-island" aria-selected="false">· 海島自由行</a>
+              <a href="#"  class="trip-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-travel-tab" data-bs-toggle="pill" data-bs-target="#v-pills-travel" type="button" role="tab" aria-controls="v-pills-travel" aria-selected="false">· 短天數出門推薦</a>
+              <a href="#"  class="trip-nav-link mb-4 p-3 fs-5 border-0 bg-white text-neutral-500" id="v-pills-weekend-tab" data-bs-toggle="pill" data-bs-target="#v-pills-weekend" type="button" role="tab" aria-controls="v-pills-weekend" aria-selected="false">· 周末露營趣</a>
             </div>
           </aside>
-          <div class="journey-content col-lg-9">
-            <div class="journey-card tab-content p-lg-10 p-4 bg-white rounded-lg-0 rounded-3" id="v-pills-tabContent">
+          <div class="trip-content col-lg-9">
+            <div class="trip-card tab-content p-lg-10 p-4 bg-white rounded-lg-0 rounded-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active alcohol" id="v-pills-alcohol" role="tabpanel" aria-labelledby="v-pills-alcohol-tab">
-                <div class="journey-card-body py-lg-6 py-4 ">
+                <div class="trip-card-body py-lg-6 py-4 ">
                   <h3 class="pb-lg-6 pb-3 fs-4 text-primary">酒精路跑地圖</h3>
                   <ul class="d-grid fs-6 text-neutral-500">
                     <li><a href="#" class="pb-lg-5 pb-2 text-neutral-500">｜城市酒吧人氣榜,盤點當紅熱門酒吧</a></li>
@@ -303,7 +306,7 @@
                   </li>
                 </ul>
                 
-                <div class="journey-card-footer d-flex justify-content-lg-between flex-lg-row flex-column align-items-center py-lg-6 py-3">
+                <div class="trip-card-footer d-flex justify-content-lg-between flex-lg-row flex-column align-items-center py-lg-6 py-3">
                   <ul class="d-flex gap-lg-4 gap-2 py-lg-0 py-3 fs-lg-6 fs-7">
                     <li>
                       <a href="#" class="my-2 px-2 py-1 rounded-2 text-primary-400 bg-primary-300">#夜貓行程</a>
@@ -329,7 +332,7 @@
           <h2 class="fs-lg-2 fs-4">品味生活</h2>
 
           <div class="d-lg-block d-none">
-            <div class="explore-swiper-pagination swp-pagination-style d-flex justify-content-between position-relative text-neutral-400">
+            <div class="explore-swiper-pagination swp-page-nav-style d-flex justify-content-between position-relative text-neutral-400">
               <div class="explore-swiper-prev d-inline-block px-4 py-1 border border-1 border-neutral-400 rounded-pill swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-69fda5ab21c864ff" aria-disabled="true">
                 <i class="bi bi-arrow-left fs-4"></i>
               </div>
@@ -519,8 +522,6 @@
         </div>
       </section>
 
-      
-
       <section class="contact">
         <div class="container">
           <div class="d-lg-flex justify-content-between text-center py-lg-13 py-11">
@@ -535,7 +536,6 @@
     </main>
 
     <%- include('./layout/footer'); -%>
-
 
     <script type="module">
       import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
@@ -583,7 +583,6 @@
       });
   
     </script>
-
 
     <script type="module" src="../main.js"></script>
   </body>

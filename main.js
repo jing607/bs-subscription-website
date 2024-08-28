@@ -2,13 +2,9 @@ import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-// // import Swiper JS
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import 'swiper/css';
-
-// import './js/swiper';
 import './js/responsive';
+import './js/gsap';
+
 // import $ from 'jquery';
 
 
