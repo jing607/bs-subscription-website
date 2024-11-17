@@ -23,8 +23,6 @@ function moveOutputPlugin() {
 }
 
 export default defineConfig({
-  // base 的寫法：
-  // base: '/Repository 的名稱/'
   base: '/bs-subscription-website/',
   plugins: [
     liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
@@ -32,7 +30,6 @@ export default defineConfig({
     moveOutputPlugin(),
   ],
   server: {
-    // 啟動 server 時預設開啟的頁面
     open: 'pages/index.html',
   },
   build: {
